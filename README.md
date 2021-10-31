@@ -1,11 +1,11 @@
-# Deep learning for stock price prediction
+# AttentionLSTM for stock price prediction
 ![주식_이미지](https://user-images.githubusercontent.com/76574427/139482743-d017ba50-dacd-4642-8560-29f2af7169b4.jpg)
 
 주가 예측은 힘들지만 금융산업에서 중요한 문제임.
 
 최근 딥러닝을 이용한 주가예측 알고리즘이 뛰어난 성능을 보이고 있음.  
 
-아래에는 딥러닝을 이용한 방식 중 AttentionLSTM, TransformerEncoder를 이용한 예측방식을 소개함.
+아래에는 딥러닝을 이용한 방식 중 AttentionLSTM을 이용한 예측방식을 소개함.
 
 ## Installation
 - Install pytorch 
@@ -22,7 +22,7 @@
 
 
 ## Running
-run ```AttentionLSTM_main.py``` and ```transformer_main.py```.
+run ```main.py```.
 
 
 ## Output
@@ -37,17 +37,6 @@ run ```AttentionLSTM_main.py``` and ```transformer_main.py```.
 - AttentionLSTM for one step ahead prediction
 
 ![attLSTM](https://user-images.githubusercontent.com/76574427/139543299-e7b72728-6cc6-407b-899c-261314d958aa.PNG)
-
-
-
-## TransformerEncoder
-자연어 처리에 뛰어난 성과를 보인 Transformer 구조에서
-Encoder 구조만을 부분적으로 차용, Time series 데이터에 이용함.
-
-- TransformerEncoder
-
-![AttentionEncoder](https://user-images.githubusercontent.com/76574427/139543290-4f952916-39b6-411e-9ba1-f228b74b450d.PNG)
-
 
 
 ## Experiment setting
