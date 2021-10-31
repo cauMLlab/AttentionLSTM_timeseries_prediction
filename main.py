@@ -38,19 +38,23 @@ def train(encoder,decoder, partition, enc_optimizer,dec_optimizer, loss_fn, args
     y_pred_graph = []
     for i, (X, y, min, max) in enumerate(trainloader):
 
+        encoder.zero_grad()
+        enc_optimizer.zero_grad()
+
+        decoder.zero_grad()
+        dec_optimizer.zero_grad()
+
         ## (batch size, sequence length, input dim)
         X = X.transpose(0, 1).unsqueeze(-1).float().to(args.device)
 
-        encoder.zero_grad()
-        enc_optimizer.zero_grad()
+
         encoder.hidden = [hidden.to(args.device) for hidden in encoder.init_hidden()]
         y_pred_enc, encoder_hidden = encoder(X)
 
         decoder_hidden = encoder_hidden
         y_true = y[:, :].float().to(args.device)
 
-        decoder.zero_grad()
-        dec_optimizer.zero_grad()
+
 
         y_pred_dec, atten_w = decoder(X, decoder_hidden)
 
@@ -124,6 +128,7 @@ def test(encoder,decoder, partition, args):
     MAE_metric = 0.0
     RMSE_metric = 0.0
     MAPE_metric = 0.0
+
     with torch.no_grad():
         y_pred_graph = []
         for i, (X, y, min, max) in enumerate(testloader):
