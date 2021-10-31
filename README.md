@@ -61,3 +61,13 @@ pandas_datareader를 이용하여 야후 파이낸스에 있는 데이터셋을 
 
 yahoofinance에서 제공되는 정보(Open, Close, High, Low, Volume, AdjClose)를 불러옴.
 
+## Citations
+```
+@InProceedings{Dzmitry Bahdanau_2015_ICLR,
+author = {Dzmitry Bahdanau, KyungHyun Cho, Yoshua Bengio},
+title = {NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE},
+booktitle = {International Conference on Learning Representations (ICLR 2015)},
+month = {September},
+year = {2014}
+}
+```
